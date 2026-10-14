@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>Prayers — SOURCE</title>
+  <meta name="description" content="A quiet place for prayers, wishes, and positive messages. Turn your words into a constellation of light, saved only in your own browser.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="prayers.css">
+  <script src="prayers.js" defer></script>
+</head>
+<body class="prayers-page">
+  <a class="skip-link" href="#prayer-form">Skip to write a prayer</a>
+  <svg class="svg-defs" aria-hidden="true"><defs><symbol id="spark" viewBox="0 0 32 32"><path d="M16 0 18.7 11.4 27.3 4.7 20.6 13.3 32 16 20.6 18.7 27.3 27.3 18.7 20.6 16 32 13.3 20.6 4.7 27.3 11.4 18.7 0 16 11.4 13.3 4.7 4.7 13.3 11.4Z" fill="currentColor"/></symbol><symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol></defs></svg>
+  <header class="header">
+    <a class="brand" href="./" aria-label="SOURCE home"><svg><use href="#spark"/></svg><span>SOURCE</span></a>
+    <nav aria-label="Main navigation"><a href="./#creation">Creation</a><a href="./#stillness">Stillness</a><a href="./#connection">Connection</a><a href="prayers.html" aria-current="page">Prayers <span class="nav-star" aria-hidden="true">✦</span></a></nav>
+    <a href="#prayer-form" class="quiet-link prayer-header-link">Send a little light <span>↗</span></a>
+  </header>
+  <main class="prayers-main">
+    <div class="prayers-heading"><div><p class="eyebrow">THE PRAYER SKY / A SPACE OF YOUR OWN</p><h1>Let your words<br>become <em>light.</em></h1></div><p>A prayer, a wish, a little kindness.<br>Give it words. Watch it find its light.<br><span>All beliefs. All hopes. Room for every heart.</span></p></div>
+    <noscript><p class="no-script">Please enable JavaScript to turn your words into lights. Your prayers are never sent to a server.</p></noscript>
+    <div class="prayers-layout">
+      <form id="prayer-form" class="prayer-form" novalidate>
+        <div class="form-heading"><svg aria-hidden="true"><use href="#spark"/></svg><span>A LITTLE GOOD BEGINS HERE</span></div>
+        <fieldset class="intention-field"><legend>01 / Choose your intention</legend><div class="intention-options">
+          <input type="radio" name="intention" value="peace" id="intention-peace" checked><label for="intention-peace"><span class="intention-dot peace-dot"></span>Peace</label>
+          <input type="radio" name="intention" value="healing" id="intention-healing"><label for="intention-healing"><span class="intention-dot healing-dot"></span>Healing</label>
+          <input type="radio" name="intention" value="gratitude" id="intention-gratitude"><label for="intention-gratitude"><span class="intention-dot gratitude-dot"></span>Gratitude</label>
+          <input type="radio" name="intention" value="hope" id="intention-hope"><label for="intention-hope"><span class="intention-dot hope-dot"></span>Hope</label>
+        </div></fieldset>
+        <div class="prayer-input-top"><label for="prayer-message">02 / Put it into words</label><span id="character-count" aria-hidden="true">0 / 600</span></div>
+        <textarea id="prayer-message" name="message" maxlength="600" rows="5" required aria-describedby="prayer-privacy prayer-error" placeholder="May someone who feels alone find a little warmth today."></textarea>
+        <button type="button" class="starter-button" id="prayer-starter">A little inspiration <span aria-hidden="true">↗</span></button>
+        <p id="prayer-error" class="prayer-error" role="alert"></p>
+        <button type="submit" id="release-prayer" class="release-button" disabled><span>Release into light</span><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+        <p class="prayer-privacy" id="prayer-privacy"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M6 9V6a4 4 0 0 1 8 0v3M4 9h12v8H4z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span>Your words stay in this browser.<br>They aren’t posted or sent to anyone.</span></p>
+      </form>
+      <section class="prayer-sky" aria-labelledby="sky-heading">
+        <canvas id="prayer-canvas" aria-hidden="true"></canvas>
+        <div class="sky-top"><h2 id="sky-heading">YOUR CONSTELLATION</h2><button id="prayer-motion" aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button></div>
+        <div id="prayer-stars" class="prayer-stars" aria-label="Your prayer lights"></div>
+        <div class="sky-empty" id="sky-empty"><svg aria-hidden="true"><use href="#spark"/></svg><p>Your sky is waiting.</p><span>Every kind word starts somewhere.</span></div>
+        <div class="sky-bottom"><span id="sky-count">0 LIGHTS / ALL YOURS</span><span id="sky-hint">YOUR WORDS, IN ANOTHER FORM</span></div>
+      </section>
+    </div>
+    <section class="release-result" id="release-result" tabindex="-1" hidden aria-labelledby="reflection-heading"><div class="reflection-symbol" aria-hidden="true"><svg><use href="#spark"/></svg></div><div><p class="eyebrow" id="reflection-heading">A REFLECTION FOR YOUR INTENTION</p><p class="reflection-text" id="reflection-text"></p><span class="reflection-caption">An original reflection, chosen for your intention.</span></div><button id="open-latest-light" class="reflection-open">Read your words <span aria-hidden="true">↗</span></button></section>
+    <p id="prayer-status" class="prayer-status" role="status" aria-live="polite"></p>
+    <div class="saved-prayers"><details id="saved-prayers-details"><summary>Your saved prayers <span id="saved-count">0</span><span class="details-arrow" aria-hidden="true">⌄</span></summary><p id="saved-empty" class="saved-empty">Your prayers will be here after you release your first light.</p><ul id="saved-prayers-list"></ul></details><button id="clear-prayers" class="clear-prayers" disabled>Clear my sky</button></div>
+    <div class="prayer-closing"><p>A little light doesn’t have to change everything.<br><em>Sometimes it changes the way we begin.</em></p><a href="./" class="text-action">Return to SOURCE <svg><use href="#arrow"/></svg></a></div>
+  </main>
+  <footer><a class="brand" href="./"><svg><use href="#spark"/></svg><span>SOURCE</span></a><p>An imaginative exploration of the divine.</p><span>WHEREVER YOU ARE, BEGIN THERE.</span></footer>
+  <dialog id="prayer-detail" aria-labelledby="detail-heading"><div class="light-detail-shell"><button class="close-light" id="close-prayer-detail" aria-label="Close prayer">Close <span aria-hidden="true">×</span></button><p class="eyebrow" id="detail-heading"></p><svg class="detail-symbol" aria-hidden="true"><use href="#spark"/></svg><blockquote id="detail-message"></blockquote><p class="detail-reflection" id="detail-reflection"></p><span id="detail-date" class="detail-date"></span></div></dialog>
+  <dialog id="clear-sky-dialog" aria-labelledby="clear-heading"><div class="clear-shell"><p class="eyebrow">A NEW BEGINNING</p><h2 id="clear-heading">Clear your<br><em>prayer sky?</em></h2><p id="clear-description">This removes your saved prayers from this browser.</p><div class="clear-actions"><button id="keep-prayers">Keep my lights</button><button id="confirm-clear">Clear my sky</button></div></div></dialog>
+</body>
+</html>
