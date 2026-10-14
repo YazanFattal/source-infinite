@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>SOURCE — A glimpse of the infinite</title>
+  <meta name="description" content="An imagined doorway to the infinite. Explore creation, find a moment of stillness, and bring a little light into the world.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#creation">Skip to explore</a>
+  <svg class="svg-defs" aria-hidden="true"><defs><symbol id="spark" viewBox="0 0 32 32"><path d="M16 0 18.7 11.4 27.3 4.7 20.6 13.3 32 16 20.6 18.7 27.3 27.3 18.7 20.6 16 32 13.3 20.6 4.7 27.3 11.4 18.7 0 16 11.4 13.3 4.7 4.7 13.3 11.4Z" fill="currentColor"/></symbol><symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol></defs></svg>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="SOURCE home"><svg><use href="#spark"/></svg><span>SOURCE</span></a>
+    <nav aria-label="Main navigation"><a href="#creation">Creation</a><a href="#stillness">Stillness</a><a href="#connection">Connection</a></nav>
+    <button class="quiet-link" data-quiet>Enter the quiet <span>↗</span></button>
+  </header>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"><img src="assets/source-nebula.webp" alt="" fetchpriority="high"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="orbit-dot"></span></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="tiny-star">✦</span> A GLIMPSE OF THE INFINITE</p>
+        <h1 id="hero-title">You are here.<br>That is a<br><em>miracle.</em></h1>
+        <p class="hero-copy">Of all the moments in all of existence,<br>you get to be in this one.</p>
+        <a class="primary-cta" href="#creation">Explore the infinite <span class="arrow-disc"><svg><use href="#arrow"/></svg></span></a>
+      </div>
+      <div class="hero-foot"><a href="#creation" class="scroll-cue"><span>↓</span> SCROLL TO DISCOVER</a><p>ALL OF EXISTENCE.<br><span>ONE PRESENT MOMENT.</span></p></div>
+      <div class="art-caption" aria-hidden="true"><span class="caption-line"></span> THE FIRST LIGHT <span>001 / ∞</span></div>
+    </section>
+    <div class="threshold"><span>BEYOND THE ORDINARY</span><svg><use href="#spark"/></svg><p>The sacred is closer than you think.</p><svg><use href="#spark"/></svg><span>WITHIN EVERYTHING</span></div>
+    <section class="creation section-pad" id="creation" aria-labelledby="creation-title">
+      <div class="section-top"><p class="eyebrow">01 / THE WONDER</p><span class="section-note">EVERYTHING BEGINS SOMEWHERE</span></div>
+      <div class="section-heading"><h2 id="creation-title">Creation is still<br><em>happening.</em></h2><p>Light across a room. A seed opening in the dark.<br>The universe doesn’t have to be far away<br>to be astonishing.</p></div>
+      <div class="universe-panel">
+        <canvas id="universe" aria-hidden="true"></canvas>
+        <div class="universe-top"><span class="live-dot"></span><span id="universe-label">A STUDY IN LIGHT</span><button id="motion-toggle" aria-pressed="false">Pause motion <span>Ⅱ</span></button></div>
+        <div class="universe-center" aria-hidden="true"><span id="universe-word">Let there<br>be <em>light.</em></span></div>
+        <div class="universe-bottom"><p id="universe-description">A single spark. An endless possibility.</p><button class="spark-button" id="create-spark">Create a spark <svg><use href="#spark"/></svg></button></div>
+      </div>
+      <div class="universe-tabs" role="group" aria-label="Explore forms of creation"><button class="active" data-mode="light" aria-pressed="true"><span>01</span> Light <small>The beginning</small></button><button data-mode="matter" aria-pressed="false"><span>02</span> Matter <small>The becoming</small></button><button data-mode="life" aria-pressed="false"><span>03</span> Life <small>The unfolding</small></button></div>
+      <p class="spark-feedback sr-only" id="spark-feedback" role="status"></p>
+    </section>
+    <section class="stillness section-pad" id="stillness" aria-labelledby="stillness-title">
+      <div class="stillness-orb" aria-hidden="true"><div></div><span class="orb-ring ring-one"></span><span class="orb-ring ring-two"></span><span class="orb-ring ring-three"></span><svg><use href="#spark"/></svg><p>JUST THIS.<br>JUST NOW.</p></div>
+      <div class="stillness-copy"><p class="eyebrow">02 / THE STILLNESS</p><h2 id="stillness-title">Even infinity<br>takes a <em>breath.</em></h2><p>You don’t have to become anything for a moment.<br>Let the next task wait. Feel the ground beneath you.<br>There is room for you here, exactly as you are.</p><button class="text-action" data-quiet>Take one quiet minute <svg><use href="#arrow"/></svg></button><span class="small-note">60 SECONDS. NOTHING TO ACHIEVE.</span></div>
+    </section>
+    <section class="connection section-pad" id="connection" aria-labelledby="connection-title">
+      <div class="section-top"><p class="eyebrow">03 / THE CONNECTION</p><span class="section-note">THE INFINITE, MADE HUMAN</span></div>
+      <div class="connection-layout"><div><h2 id="connection-title">Be someone’s<br><em>little miracle.</em></h2><p>You may never hold the whole world.<br>You can hold a door. Keep a promise. Listen longer.<br>Begin with what is within reach.</p><div class="kindness-note"><svg><use href="#spark"/></svg><span>Small acts. Boundless ripples.</span></div></div>
+      <div class="kindness-card"><div class="card-top"><span>A LITTLE LIGHT TO GIVE</span><span id="act-number">01 / 08</span></div><svg class="card-spark" aria-hidden="true"><use href="#spark"/></svg><p id="kindness-text" aria-live="polite">Tell someone one specific thing you appreciate about them.</p><div class="kindness-controls"><button id="accept-kindness">I’ll try this <span>↗</span></button><button id="next-kindness" aria-label="Show another small act"><svg><use href="#arrow"/></svg></button></div><p id="kindness-status" role="status">A small invitation. Entirely yours.</p></div></div>
+    </section>
+    <section class="closing"><p class="eyebrow">NO MATTER WHERE YOU BEGIN</p><h2>You belong<br>to <em>the beautiful.</em></h2><a href="#home" class="closing-link">And the beautiful belongs to you. <span>↑</span></a></section>
+  </main>
+  <footer><a class="brand" href="#home"><svg><use href="#spark"/></svg><span>SOURCE</span></a><p>An imaginative exploration of the divine.</p><span>WHEREVER YOU ARE, BEGIN THERE.</span></footer>
+  <dialog id="quiet-dialog" aria-labelledby="quiet-title"><div class="quiet-shell"><button class="close-quiet" aria-label="Close quiet moment">Close <span>×</span></button><p class="eyebrow">A MOMENT, JUST FOR YOU</p><h2 id="quiet-title">Come back<br>to <em>now.</em></h2><div class="breath-visual" aria-hidden="true"><span></span><span></span><span></span></div><p id="breath-instruction" role="status">Breathe in</p><p class="breath-hint">Follow the light, or breathe at your own pace.</p><div class="quiet-progress"><span id="breath-progress"></span></div><div class="quiet-meta"><span id="breath-time">1:00</span><button id="breath-pause">Pause</button></div><button id="breath-restart" hidden>Begin another moment <span>↗</span></button></div></dialog>
+</body>
+</html>
